@@ -1,12 +1,22 @@
 package GestionInventaire;
 
 public class InventaireMaison extends InventaireBoîte{
-	
+	public int SucreMaison;
+	public int CafeMaison;
+	public int ThéMaison;
+	public int gobeletMaison;
+	public int touilletteMaison;
+	public int argent;
 	private int argentMaison;
 
-	public InventaireMaison(int Sucre, int Cafe, int Thé, int gobelet, int touillette, int argent, int argentMaison) {
+	public InventaireMaison(int Sucre, int Cafe, int Thé, int gobelet, int touillette, int argent, int argentMaison, int SucreMaison, int CafeMaison, int ThéMaison, int gobeletMaison, int touilletteMaison) {
 		super(Sucre, Cafe, Thé, gobelet, touillette, argent);
 		this.argentMaison = argentMaison;
+		this.CafeMaison= CafeMaison;
+		this.gobeletMaison= gobeletMaison;
+		this.SucreMaison=SucreMaison;
+		this.touilletteMaison=touilletteMaison;
+		this.ThéMaison= ThéMaison;
 		}
 	public void donnerArgent() {
 		if (argentMaison > 50) {
@@ -14,14 +24,15 @@ public class InventaireMaison extends InventaireBoîte{
 			argentMaison=50;
 		}
 	}
-	public void remplirCamion() {
-		Sucre-=25;
-		Cafe-=25;
-		Thé-=25;
-		gobelet-=25;
-		touillette-=25;
+	@Override
+	public void remplir(int Sucre, int Cafe, int Thé, int gobelet, int touillette) {
+		super.remplir(Sucre, Cafe, Thé, Cafe, Sucre);
+		SucreMaison+=25;
+		CafeMaison+=25;
+		ThéMaison+=25;
+		gobeletMaison+=25;
+		touilletteMaison+=25;
 	}
-	
 	@Override
 	public void CheckArgent() {
 		super.CheckArgent();
