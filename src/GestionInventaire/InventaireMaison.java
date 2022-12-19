@@ -27,11 +27,11 @@ public class InventaireMaison extends InventaireBoîte{
 	@Override
 	public void remplir(int Sucre, int Cafe, int Thé, int gobelet, int touillette) {
 		super.remplir(Sucre, Cafe, Thé, Cafe, Sucre);
-		SucreMaison+=25;
-		CafeMaison+=25;
-		ThéMaison+=25;
-		gobeletMaison+=25;
-		touilletteMaison+=25;
+		SucreMaison+=Sucre;
+		CafeMaison+=Cafe;
+		ThéMaison+=Thé;
+		gobeletMaison+=gobelet;
+		touilletteMaison+=touillette;
 	}
 	@Override
 	public void CheckArgent() {

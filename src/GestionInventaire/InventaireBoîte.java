@@ -87,16 +87,36 @@ public class InventaireBoîte {
 			System.out.println("Tout est bon");
 		}
 	}
-	public void remplir(int Sucre, int Cafe, int Thé, int gobelet, int touillette) {
-		Sucre-=25;
-		Cafe-=25;
-		Thé-=25;
-		gobelet-=25;
-		touillette-=25;
+	public void remplir(int Sucrenb, int Cafenb, int Thénb, int gobeletnb, int touillettenb) {
+		if (Sucre-Sucrenb < 0) {
+			System.out.println("Pas assez de Sucre il faut vérifier l'inventaire ! ");
+			CheckInventaire(Sucrenb);
+		}
+		Sucre-=Sucrenb;
+		if (Cafe-Cafenb < 0) {
+			System.out.println("Pas assez de Cafe il faut vérifier l'inventaire ! ");
+			CheckInventaire(Cafenb);
+		}
+		Cafe-=Cafenb;
+		if (Thé-Thénb < 0) {
+			System.out.println("Pas assez de Thé il faut vérifier l'inventaire ! ");
+			CheckInventaire(Thénb);
+		}
+		Thé-=Thénb;
+		if (gobelet-gobeletnb < 0) {
+			System.out.println("Pas assez de gobelet il faut vérifier l'inventaire ! ");
+			CheckInventaire(gobeletnb);
+		}
+		gobelet-=gobeletnb;
+		if (touillette-touillettenb < 0) {
+			System.out.println("Pas assez de touillette il faut vérifier l'inventaire ! ");
+			CheckInventaire(touillettenb);
+		}
+		touillette-=touillettenb;
 		// on enleve les différents produits pour qu'ils soient rajouter dans la classe fille avec l'héritage 
 	}
 	public void livraisonSemaine(Semaines semaines) {
-		if (semaines.toString()=="A") {
+		if (semaines.toString()=="A") { // ici les semaines correspondent au nombres de produits qu'il faut pour toute la semaine
 			if (Sucre>=60 & Cafe>=45 & Thé >=35 & gobelet>=45 & touillette>=45) {
 				remplir(60,45,35,45,45);
 			}
