@@ -47,10 +47,7 @@ public class InventaireMaison extends InventaireBoîte {
 			recevoirArgent(argent);
 		}
 	}
-
-	@Override
 	public void VoirInventaire() {
-		super.VoirInventaire();
 		System.out.println("Il y a  " + SucreMaison + " de sucre à la maison");
 		System.out.println("Il y a  " + CafeMaison + " de Cafe a la maison");
 		System.out.println("Il y a  " + ThéMaison + " de thé a la maison");
