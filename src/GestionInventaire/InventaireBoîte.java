@@ -26,7 +26,7 @@ public class InventaireBoîte {
 			System.out.println(
 					"Il faut se revoir le plan de vente et peut être augmenter les prix ! sinon on court à la faillite ! ");
 		} else {
-			System.out.println("La commande peux se passer sans accroc !");
+			System.out.println("Pas de probleme niveau argent car nous en avons  " + argent + " ! ");
 		}
 	}
 
