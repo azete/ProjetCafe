@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import GestionInventaire.Semaines;
-import GestionInventaire.InventaireBoîte;
+import GestionInventaire.InventaireBoite;
 import GestionInventaire.InventaireMaison;
 
 public class Interface {
@@ -13,7 +13,7 @@ public class Interface {
 		System.out.println("3. Semaine 3");
 
 		try {
-			int userInput = Integer.parseInt(inputOutput("Veuillez selectionner quelle semaines pour la tournée !"));
+			int userInput = Integer.parseInt(inputOutput("Veuillez selectionner quelle semaines pour la tournee !"));
 
 			if (userInput >= 0 && userInput <= 3) {
 				if (userInput == 1) choix1();
@@ -32,10 +32,10 @@ public class Interface {
 	}
 
 	public static void choix1() {
-		InventaireBoîte sodebo = new InventaireBoîte(200, 200, 200, 200, 200, 500);
+		InventaireBoite sodebo = new InventaireBoite(200, 200, 200, 200, 200, 500);
 		InventaireMaison maison = new InventaireMaison(150, 150, 150, 150, 150, 500, 0, 0, 0, 0, 0, 0);
 		System.out.println("Vous avez donc choisis la semaine 1 !\n Maintenant que souhaitez vous faire ? ");
-		System.out.println("1. CheckInventaireSociété");
+		System.out.println("1. CheckInventaireSociete");
 		System.out.println("2. CheckInventaireMaison");
 		System.out.println("3. regarder les finances");
 		System.out.println("4. Faire la livraison");
@@ -69,7 +69,7 @@ public class Interface {
 			if (userInput3 >0 && userInput3 <=3) {
 				if (userInput3 == 1) mainMenu();
 				if (userInput3 == 2) choix1();
-				if (userInput3 == 2) System.out.println("Merci de votre visite, je vous souhaite une bonne journée !");
+				if (userInput3 == 2) System.out.println("Merci de votre visite, je vous souhaite une bonne journee !");
 			}else {
 				System.out.println("Veuillez selectionner un nombre entre  1 - 3");
 				choix1part2();
@@ -82,10 +82,10 @@ public class Interface {
 	}
 
 	public static void choix2() {
-		InventaireBoîte sodebo = new InventaireBoîte(200, 200, 200, 200, 200, 500);
+		InventaireBoite sodebo = new InventaireBoite(200, 200, 200, 200, 200, 500);
 		InventaireMaison maison = new InventaireMaison(150, 150, 150, 150, 150, 500, 0, 0, 0, 0, 0, 0);
 		System.out.println("Vous avez donc choisis la semaine 1 !\n Maintenant que souhaitez vous faire ? ");
-		System.out.println("1. CheckInventaireSociété");
+		System.out.println("1. CheckInventaireSociete");
 		System.out.println("2. CheckInventaireMaison");
 		System.out.println("3. regarder les finances");
 		System.out.println("4. Faire la livraison");
@@ -119,7 +119,7 @@ public class Interface {
 			if (userInput3 >0 && userInput3 <=3) {
 				if (userInput3 == 1) mainMenu();
 				if (userInput3 == 2) choix2();
-				if (userInput3 == 3) System.out.println("Merci de votre visite, je vous souhaite une bonne journée !");
+				if (userInput3 == 3) System.out.println("Merci de votre visite, je vous souhaite une bonne journee !");
 			}else {
 				System.out.println("Veuillez selectionner un nombre entre  1 - 3");
 				choix2part2();
@@ -132,10 +132,10 @@ public class Interface {
 	}
 
 	public static void choix3() {
-		InventaireBoîte sodebo = new InventaireBoîte(200, 200, 200, 200, 200, 500);
+		InventaireBoite sodebo = new InventaireBoite(200, 200, 200, 200, 200, 500);
 		InventaireMaison maison = new InventaireMaison(150, 150, 150, 150, 150, 500, 0, 0, 0, 0, 0, 0);
 		System.out.println("Vous avez donc choisis la semaine 1 !\n Maintenant que souhaitez vous faire ? ");
-		System.out.println("1. CheckInventaireSociété");
+		System.out.println("1. CheckInventaireSociete");
 		System.out.println("2. CheckInventaireMaison");
 		System.out.println("3. regarder les finances");
 		System.out.println("4. Faire la livraison");
@@ -162,14 +162,14 @@ public class Interface {
 	}
 	public static void choix3part2() {
 		System.out.println("1. Revenir au menu des choix de semaines");
-        System.out.println("2. Revenir au choix des options de la Troisième semaine");
+        System.out.println("2. Revenir au choix des options de la Troisieme semaine");
         System.out.println("3. Partir");
 		try {
 			int userInput3 = Integer.parseInt(inputOutput("Veuillez selectionner 1 - 3 !"));
 			if (userInput3 >0 && userInput3 <=3) {
 				if (userInput3 == 1) mainMenu();
 				if (userInput3 == 2) choix3();
-				if (userInput3 == 3) System.out.println("Merci de votre visite, je vous souhaite une bonne journée !");
+				if (userInput3 == 3) System.out.println("Merci de votre visite, je vous souhaite une bonne journee !");
 			}else {
 				System.out.println("Veuillez selectionner un nombre entre  1 - 3");
 				choix3part2();
